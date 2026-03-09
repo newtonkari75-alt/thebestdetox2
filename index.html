@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    
+    <!-- Script de Lógica Externa (Atualizado com defer) -->
+    <script src="https://cdn.ventrocdn.com/code/8300-5a2a561c-b0ba-49e7-bf7a-df1aeb083668"></script>
+
+    <!-- FAVICON -->
+    <link rel="icon" href="images/faviconV2 (3).png" type="image/png">
+
+    <!-- =========================
+         SEO HEAD (Global/EN Default)
+         ========================= -->
+    <title id="meta-title">Lulutox™ Tea – 70% Discount Today | Less Bloating, More Energy | Free Shipping</title>
+    <meta name="description" id="meta-desc" content="Lulutox™ Tea: A Daily Superfood Tea with 13 Natural Ingredients that can contribute to less bloating, more energy and better well-being. 70% discount today, free shipping and 30-day money-back guarantee." />
+    <meta name="keywords" id="meta-keywords" content="Lulutox, Lulutox Tea, Detox Tea, Wellness Tea, Tea Against Bloating, Less Bloating, Flat Stomach Tea, Weight Loss Tea, Cravings, Energy Tea, Digestion, Superfood Tea, Matcha Tea, Yerba Mate Tea, Sencha Tea, Oolong Tea, Goji Berry, Milk Thistle, Ginseng, Lemongrass, Nettle Leaf, Dandelion Leaf, Guarana, Stevia, Vegan Tea, Gluten-Free Tea" />
+    <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
+    <meta name="googlebot" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
+    <link rel="canonical" href="https://thebestdetox.vercel.app/" />
+
+    <!-- Open Graph (Global) -->
+    <meta property="og:type" content="product" />
+    <meta property="og:site_name" content="Lulutox" />
+    <meta property="og:title" content="Lulutox™ Tea – 70% Discount Today | Free Shipping" />
+    <meta property="og:description" content="Daily Superfood Tea with 13 Ingredients. Can contribute to less bloating, more energy and better well-being. 30-Day Money-Back Guarantee." />
+    <meta property="og:url" content="https://thebestdetox.vercel.app/" />
+    <meta property="og:image" content="https://thebestdetox.vercel.app/og.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Lulutox™ Tea – 70% Discount Today" />
+    <meta name="twitter:description" content="13 Natural Ingredients. Free Shipping. 30-Day Guarantee." />
+    <meta name="twitter:image" content="https://thebestdetox.vercel.app/og.jpg" />
+
+    <!-- Technical / Performance Pre-connects -->
+    <link rel="preconnect" href="https://thebestdetox.vercel.app" crossorigin />
+    <link rel="dns-prefetch" href="//thebestdetox.vercel.app" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+    <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="dns-prefetch" href="//fonts.gstatic.com" />
+
+    <!-- =========================
+         JSON-LD STRUCTURED DATA
+         ========================= -->
+    <script type="application/ld+json">
+    [
+      {
+        "@context": "https://schema.org/",
+        "@type": "Product",
+        "name": "Lulutox Tea",
+        "image": ["https://lulutox-tea.vercel.app/images/lulutox.png"],
+        "description": "Natural premium tea with 13 botanical ingredients designed for digestive support and energy.",
+        "sku": "LULUTOX-TEA-01",
+        "brand": { "@type": "Brand", "name": "Lulutox" },
+        "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "reviewCount": "1978" },
+        "offers": {
+          "@type": "AggregateOffer",
+          "priceCurrency": "USD",
+          "lowPrice": "39.00",
+          "highPrice": "79.00",
+          "offerCount": "4",
+          "availability": "https://schema.org/InStock",
+          "seller": { "@type": "Organization", "name": "Fonslife Trading FZCO" }
+        }
+      },
+      {
+        "@context":"https://schema.org",
+        "@type":"WebSite",
+        "name":"Lulutox",
+        "url":"https://thebestdetox.vercel.app/"
+      }
+    ]
+    </script>
+
+    <!-- UI Assets -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #ffffff; }
+        .star-filled { color: #f59e0b; fill: #f59e0b; }
+        .hero-section-bg { position: relative; background-color: #fff9f8; overflow: hidden; min-height: 80vh; display: flex; align-items: center; }
+        .hero-overlay-img {
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            background-image: url('images/imgi_65_bcg1.jpg');
+            background-size: cover; background-position: center; opacity: 0.35; z-index: 0;
+        }
+        .hero-container { position: relative; z-index: 10; }
+        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.45); backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px); border: 1px solid rgba(255, 255, 255, 0.6);
+        }
+        .modal-open { overflow: hidden; }
+        .prose h4 { font-weight: 700; margin-top: 1.5rem; margin-bottom: 0.5rem; color: #111; text-transform: uppercase; font-size: 0.85rem; border-bottom: 1px solid #eee; padding-bottom: 4px; }
+        .prose p { margin-bottom: 0.8rem; line-height: 1.5; font-size: 0.85rem; color: #4b5563; }
+        
+        /* Cor de Detalhe #FEC7C2 */
+        .brand-bg { background-color: #FEC7C2; }
+        .brand-text { color: #d4a09a; }
+        .brand-border { border-color: #FEC7C2; }
+        
+        .policy-table { width: 100%; border-collapse: collapse; font-size: 0.75rem; margin: 1rem 0; }
+        .policy-table th, .policy-table td { border: 1px solid #e5e7eb; padding: 8px; text-align: left; }
+        .policy-table th { background-color: #f9fafb; font-weight: bold; }
+    </style>
+</head>
+<body class="text-gray-800 relative">
+
+    <header class="sticky top-0 bg-white/95 backdrop-blur-md z-40 shadow-sm border-b border-gray-100">
+        <div class="container mx-auto flex justify-center items-center p-4">
+            <img src="images/imgi_3_logo.png" width="140" alt="Lulutox Tea Logo" class="h-10 w-auto">
+        </div>
+    </header>
+
+    <main>
+        <section id="order" class="hero-section-bg" aria-label="Order Section">
+            <div class="hero-overlay-img"></div>
+            
+            <div class="container mx-auto px-6 py-10 md:py-16 hero-container">
+                <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8 items-center">
+                    
+                    <div class="text-center md:text-left reveal flex flex-col items-center md:items-start">
+                        
+                        <!-- Rating & Promo Badge -->
+                        <div class="glass-panel rounded-full px-5 py-2 mb-6 inline-flex items-center gap-3 shadow-sm mx-auto md:mx-0">
+                            <div class="flex items-center gap-1">
+                                <span class="font-bold text-sm">4.8/5</span>
+                                <div class="flex items-center">
+                                    <i class="star-filled w-4 h-4" data-feather="star"></i>
+                                    <i class="star-filled w-4 h-4" data-feather="star"></i>
+                                    <i class="star-filled w-4 h-4" data-feather="star"></i>
+                                    <i class="star-filled w-4 h-4" data-feather="star"></i>
+                                    <i class="star-filled w-4 h-4" data-feather="star"></i>
+                                </div>
+                            </div>
+                            <div class="w-px h-4 bg-gray-400 opacity-50"></div>
+                            <span class="text-xs font-bold uppercase tracking-wide text-gray-700" data-i18n="offer">LIMITED OFFER: 70% OFF</span>
+                        </div>
+
+                        <!-- HEADLINE -->
+                        <h1 class="text-4xl sm:text-5xl font-extrabold mb-5 leading-tight tracking-tight text-gray-900" data-i18n="h1">
+                            Lulutox Tea:<br> Wellness, flatter stomach<br> and more energy
+                        </h1>
+                        
+                        <!-- SUBHEAD -->
+                        <p class="text-lg md:text-xl mb-8 text-gray-700 leading-relaxed max-w-lg font-medium" data-i18n="p-hero">
+                            Experience an easier start with one daily cup. Lulutox Tea can contribute to less bloating, support digestion, and give a lighter feeling in the body.
+                        </p>
+                        
+                        <!-- CHECKLIST TEXTO -->
+                        <div class="w-full max-w-md glass-panel rounded-2xl p-6 mb-8 text-left shadow-sm reveal">
+                            <ul class="space-y-4">
+                                <li class="flex items-start">
+                                    <div class="brand-bg rounded-full p-1 mr-3 mt-0.5 flex-shrink-0">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="text-white"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                    </div>
+                                    <span class="text-gray-800 font-medium text-sm sm:text-base" data-i18n="list-1">Support for digestion and wellness</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <div class="brand-bg rounded-full p-1 mr-3 mt-0.5 flex-shrink-0">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="text-white"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                    </div>
+                                    <span class="text-gray-800 font-medium text-sm sm:text-base" data-i18n="list-2">13 natural ingredients (non-GMO)</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <div class="brand-bg rounded-full p-1 mr-3 mt-0.5 flex-shrink-0">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="text-white"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                    </div>
+                                    <span class="text-gray-800 font-medium text-sm sm:text-base" data-i18n="list-3">30-day money-back guarantee</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col gap-4 reveal">
+                        <!-- Foto do Produto (Desktop e Mobile) -->
+                        <div class="flex justify-center mb-4">
+                            <img src="images/lulutox.png" alt="Lulutox Tea Package" class="w-full max-w-xs h-auto drop-shadow-xl transform hover:scale-105 transition-transform duration-500">
+                        </div>
+
+                        <p class="text-center font-bold text-gray-800 uppercase tracking-widest text-sm mb-2" data-i18n="choose">Choose your country:</p>
+                        
+                        <!-- Seletores de País (Abrindo na mesma aba) -->
+                        <div class="flex flex-col gap-3 w-full">
+                            <a href="https://fa93o.doctornroman.com/l" class="flex items-center justify-center brand-bg hover:opacity-90 text-white text-lg font-bold py-4 rounded-full transition-all shadow-lg hover:-translate-y-0.5 text-center relative overflow-hidden group">
+                                <span class="relative z-10" data-i18n="fr">France</span>
+                                <div class="absolute inset-0 bg-white/20 group-hover:translate-x-full transition-transform duration-500 -skew-x-12 -ml-4 w-1/2 h-full"></div>
+                            </a>
+                            <a href="https://8nfd9.doctorthetran.com/l" class="flex items-center justify-center brand-bg hover:opacity-90 text-white text-lg font-bold py-4 rounded-full transition-all shadow-lg hover:-translate-y-0.5 text-center relative overflow-hidden group">
+                                <span class="relative z-10" data-i18n="no">Norway</span>
+                                <div class="absolute inset-0 bg-white/20 group-hover:translate-x-full transition-transform duration-500 -skew-x-12 -ml-4 w-1/2 h-full"></div>
+                            </a>
+                            <a href="https://ht6tl.doctormedved.com/l" class="flex items-center justify-center brand-bg hover:opacity-90 text-white text-lg font-bold py-4 rounded-full transition-all shadow-lg hover:-translate-y-0.5 text-center relative overflow-hidden group">
+                                <span class="relative z-10" data-i18n="it">Italy</span>
+                                <div class="absolute inset-0 bg-white/20 group-hover:translate-x-full transition-transform duration-500 -skew-x-12 -ml-4 w-1/2 h-full"></div>
+                            </a>
+                            <a href="https://6y220.doctorramzes.com/l" class="flex items-center justify-center brand-bg hover:opacity-90 text-white text-lg font-bold py-4 rounded-full transition-all shadow-lg hover:-translate-y-0.5 text-center relative overflow-hidden group">
+                                <span class="relative z-10" data-i18n="se">Sweden</span>
+                                <div class="absolute inset-0 bg-white/20 group-hover:translate-x-full transition-transform duration-500 -skew-x-12 -ml-4 w-1/2 h-full"></div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-900 text-gray-300 py-10 border-t border-gray-800">
+        <div class="container mx-auto px-4 text-center text-sm">
+            <p class="font-medium text-white mb-2" data-i18n="footer-copy">&copy; 2026 Lulutox Tea. Natural Wellness Solutions.</p>
+            <div class="inline-flex items-center gap-2 bg-gray-800/50 px-3 py-1 rounded-full mb-6">
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #FEC7C2;"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                <span class="text-xs text-gray-400" data-i18n="auth-retailer">Authorized Lulutox Global Retailer</span>
+            </div>
+            
+            <div class="mb-8 text-gray-500 text-[11px] space-y-4 text-center">
+                <div>
+                    <p class="text-gray-400 uppercase font-bold text-[9px] mb-1" data-i18n="entity">Responsible Entity:</p>
+                    <p>Fonslife Trading FZCO | License 39314</p>
+                    <p>Dubai Silicon Oasis, DDP, Building A1, Dubai, UAE</p>
+                </div>
+                <div>
+                    <p class="text-gray-400 uppercase font-bold text-[9px] mb-1" data-i18n="correspondence">Correspondence Address:</p>
+                    <p>3979 Albany Post Road ste 2, Unit #2277, Hyde Park, NY 12538, USA</p>
+                </div>
+                <div>
+                    <p data-i18n="support">Support: support@lulutox.com | +1 (888) 828-8952</p>
+                </div>
+            </div>
+            
+            <div class="flex justify-center flex-wrap gap-4 md:gap-8 mb-8 text-xs font-medium uppercase tracking-wide">
+                <button onclick="openModal('terms')" class="hover:text-white transition-colors border-b border-transparent hover:border-white pb-0.5" data-i18n="btn-terms">Terms of Sale</button>
+                <button onclick="openModal('privacy')" class="hover:text-white transition-colors border-b border-transparent hover:border-white pb-0.5" data-i18n="btn-privacy">Privacy Policy</button>
+                <button onclick="openModal('shipping')" class="hover:text-white transition-colors border-b border-transparent hover:border-white pb-0.5" data-i18n="btn-shipping">Shipping Policy</button>
+                <button onclick="openModal('returns')" class="hover:text-white transition-colors border-b border-transparent hover:border-white pb-0.5" data-i18n="btn-returns">Return Policy</button>
+            </div>
+
+            <div class="border-t border-gray-800 pt-6 mt-4 text-[10px] text-gray-500 max-w-3xl mx-auto space-y-2 leading-relaxed opacity-60 text-center" data-i18n="footer-disclaimer">
+                <p>This site is not a part of Google™ or Meta Inc. Lulutox Tea is a premium product by Fonslife Trading FZCO.</p>
+                <p>Results may vary by individual. Information on this site regarding Lulutox Tea is for informational purposes only.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- MODAL -->
+    <div id="policy-modal" class="fixed inset-0 z-[100] hidden" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+        <div class="fixed inset-0 bg-gray-900/80 backdrop-blur-sm transition-opacity" onclick="closeModal()"></div>
+        <div class="fixed inset-0 z-10 overflow-y-auto">
+            <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
+                <div class="relative transform overflow-hidden rounded-2xl bg-white text-left shadow-2xl transition-all sm:my-8 sm:w-full sm:max-w-4xl max-h-[90vh] flex flex-col border border-gray-100">
+                    <div class="bg-white px-6 py-4 border-b border-gray-100 flex justify-between items-center sticky top-0 z-20 shadow-sm">
+                        <h3 class="text-base font-bold text-gray-900" id="modal-title">Legal Details</h3>
+                        <button type="button" onclick="closeModal()" class="rounded-full p-1.5 bg-gray-100 text-gray-500 hover:text-gray-800 hover:bg-gray-200 transition-colors">
+                            <i data-feather="x" class="h-5 w-5"></i>
+                        </button>
+                    </div>
+                    <div class="bg-white px-8 pb-10 pt-6 overflow-y-auto overflow-x-hidden">
+                        <div class="prose prose-sm max-w-none text-gray-600" id="modal-content-area"></div>
+                    </div>
+                    <div class="bg-gray-50 px-6 py-4 sm:flex sm:flex-row-reverse border-t border-gray-100">
+                        <button type="button" onclick="closeModal()" class="w-full inline-flex justify-center rounded-xl bg-gray-900 px-6 py-2.5 text-sm font-bold text-white shadow-sm hover:bg-black sm:ml-3 sm:w-auto transition-all" data-i18n="btn-close">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Icons
+        feather.replace();
+
+        // Reveal animations
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                if (elementTop < windowHeight - 50) { reveals[i].classList.add("active"); }
+            }
+        }
+        window.addEventListener("scroll", reveal);
+        window.addEventListener("load", reveal);
+        reveal();
+
+        // TRANSLATION DICTIONARY (FR, NO, IT, SE)
+        const translations = {
+            fr: {
+                title: "Lulutox™ Thé – -70% Aujourd’Hui | Anti Ballonnements, Énergie | Livraison Gratuite",
+                desc: "Lulutox™ Thé: Un Rituel Quotidien Avec 13 Ingrédients Naturels Qui Peut Aider À Réduire Les Ballonnements, Soutenir Le Bien-Être Et Apporter Plus D’Énergie. -70% Aujourd’Hui, Livraison Gratuite Et Garantie 30 Jours.",
+                keywords: "Lulutox, Thé Lulutox, Thé Détox, Thé Bien-Être, Ballonnements, Ventre Plat, Thé Ventre Plat, Perte De Poids, Envie De Sucré, Énergie, Digestion, Superaliments, Matcha, Yerba Maté, Sencha, Oolong, Baies De Goji, Chardon-Marie, Ginseng, Citronnelle, Feuille D’Ortie, Feuille De Pissenlit, Guarana, Stévia, Vegan, Sans Gluten, France",
+                offer: "OFFRE LIMITÉE : 70% DE RÉDUCTION",
+                h1: "Lulutox Tea :<br> Bien-être, ventre plus plat<br> et plus d'énergie",
+                "p-hero": "Vivez un démarrage plus facile avec une tasse quotidienne. Lulutox Tea peut aider à réduire les ballonnements, soutenir la digestion et offrir une sensation de légèreté.",
+                "list-1": "Soutien pour la digestion et le bien-être",
+                "list-2": "13 ingrédients naturels (sans OGM)",
+                "list-3": "Garantie de remboursement de 30 jours",
+                choose: "Choisissez votre pays :",
+                fr: "France", no: "Norvège", it: "Italie", se: "Suède",
+                "footer-copy": "&copy; 2026 Lulutox Tea. Solutions de Bien-être Naturelles.",
+                "auth-retailer": "Revendeur Global Lulutox Autorisé",
+                entity: "Entité Responsable :",
+                correspondence: "Adresse de Correspondance :",
+                support: "Support : support@lulutox.com | +1 (888) 828-8952",
+                "btn-terms": "Conditions de Vente",
+                "btn-privacy": "Politique de Confidentialité",
+                "btn-shipping": "Politique d'Expédition",
+                "btn-returns": "Politique de Retour",
+                "btn-close": "Fermer",
+                "footer-disclaimer": "<p>Ce site ne fait pas partie de Google™ ou Meta Inc. Lulutox Tea est un produit premium de Fonslife Trading FZCO.</p><p>Les résultats peuvent varier selon les individus. Les informations sur ce site sont à titre informatif uniquement.</p>"
+            },
+            no: {
+                title: "Lulutox™ Te – 70% Rabatt I Dag | Mindre Oppblåsthet, Mer Energi | Gratis Frakt",
+                desc: "Lulutox™ Te: En Daglig Supermat-Te Med 13 Naturlige Ingredienser Som Kan Bidra Til Mindre Oppblåsthet, Mer Energi Og Bedre Velvære. 70% Rabatt I Dag, Gratis Frakt Og 30 Dagers Pengene-Tilbake-Garanti.",
+                keywords: "Lulutox, Lulutox Te, Detox Te, Velvære Te, Te Mot Oppblåsthet, Mindre Oppblåsthet, Flat Mage Te, Vekttap Te, Søtsug, Energi Te, Fordøyelse, Supermat Te, Matcha Te, Yerba Mate Te, Sencha Te, Oolong Te, Gojibær, Marietistel, Ginseng, Sitrongress, Nesleblad, Løvetannblad, Guarana, Stevia, Vegan Te, Glutenfri Te, Norge",
+                offer: "BEGRENSET KAMPANJE: 70% RABATT",
+                h1: "Lulutox Tea:<br> Velvære, lettere mage<br> og mer energi",
+                "p-hero": "Opplev en enklere start med én daglig kopp. Lulutox Tea kan bidra til mindre oppblåsthet, støtte fordøyelsen og gi en lettere følelse i kroppen.",
+                "list-1": "Støtte for fordøyelse og velvære",
+                "list-2": "13 naturlige ingredienser (ikke-GMO)",
+                "list-3": "30 dagers pengene-tilbake-garanti",
+                choose: "Velg ditt land:",
+                fr: "Frankrike", no: "Norge", it: "Italia", se: "Sverige",
+                "footer-copy": "&copy; 2026 Lulutox Tea. Naturlige velvære-løsninger.",
+                "auth-retailer": "Autorisert Lulutox Global Forhandler",
+                entity: "Ansvarlig enhet:",
+                correspondence: "Korrespondanseadresse:",
+                support: "Support: support@lulutox.com | +1 (888) 828-8952",
+                "btn-terms": "Salgsvilkår",
+                "btn-privacy": "Personvernerklæring",
+                "btn-shipping": "Fraktbetingelser",
+                "btn-returns": "Returregler",
+                "btn-close": "Lukk",
+                "footer-disclaimer": "<p>Dette nettstedet er ikke en del av Google™ eller Meta Inc. Lulutox Tea er et premiumprodukt fra Fonslife Trading FZCO.</p><p>Resultatene kan variere fra person till person. Informasjonen på dette nettstedet er kun ment som informasjon.</p>"
+            },
+            it: {
+                title: "Lulutox™ Tè – -70% Oggi | Meno Gonfiore, Più Energia | Spedizione Gratuita",
+                desc: "Lulutox™ Tè: Un Ritual Quotidiano Con 13 Ingredienti Naturali Che Può Aiutare A Ridurre Il Gonfiore, Supportare Il Benessere E Aumentare L’Energia. -70% Oggi, Spedizione Gratuita E Garanzia 30 Giorni.",
+                keywords: "Lulutox, Tè Lulutox, Tè Detox, Tè Benessere, Gonfiore, Pancia Piatta, Tè Pancia Piatta, Perdita Di Peso, Voglia Di Dolce, Energia, Digestione, Superfood, Matcha, Yerba Mate, Sencha, Oolong, Bacche Di Goji, Cardo Mariano, Ginseng, Lemongrass, Ortica, Tarassaco, Guaranà, Stevia, Vegano, Senza Glutine, Italia",
+                offer: "OFFERTA LIMITATA: 70% DI SCONTO",
+                h1: "Lulutox Tea:<br> Benessere, pancia più piatta<br> e più energia",
+                "p-hero": "Inizia la giornata in modo più semplice con una tazza al giorno. Lulutox Tea kann aiutare a ridurre il gonfiore, sostenere la digestione e donare una sensazione di leggerezza al corpo.",
+                "list-1": "Supporto per la digestione e il benessere",
+                "list-2": "13 ingredienti naturali (non OGM)",
+                "list-3": "Garanzia di rimborso di 30 giorni",
+                choose: "Scegli il tuo paese:",
+                fr: "Francia", no: "Norvegia", it: "Italia", se: "Svezia",
+                "footer-copy": "&copy; 2026 Lulutox Tea. Soluzioni di Benessere Naturale.",
+                "auth-retailer": "Rivenditore Globale Lulutox Autorizzato",
+                entity: "Entità Responsabile:",
+                correspondence: "Indirizzo di Corrispondenza:",
+                support: "Supporto: support@lulutox.com | +1 (888) 828-8952",
+                "btn-terms": "Termini di Vendita",
+                "btn-privacy": "Informativa sulla Privacy",
+                "btn-shipping": "Politica di Spedizione",
+                "btn-returns": "Politica di Reso",
+                "btn-close": "Chiudi",
+                "footer-disclaimer": "<p>Questo sito non fa parte di Google™ o Meta Inc. Lulutox Tea è un prodotto premium di Fonslife Trading FZCO.</p><p>I risultati possono variare da persona a persona. Le informazioni su questo sito sono solo a scopo informativo.</p>"
+            },
+            se: {
+                title: "Lulutox™ Te – 70% Rabatt Idag | Mindre Uppblåsthet, Mer Energi | Gratis Frakt",
+                desc: "Lulutox™ Te: Ett Dagligt Superfood-Te Med 13 Naturliga Ingredienser Som Kan Bidra Till Mindre Uppblåsthet, Mer Energi Och Bättre Välbefinnande. 70% Rabatt Idag, Gratis Frakt Och 30 Dagars Pengarna-Tillbaka-Garanti.",
+                keywords: "Lulutox, Lulutox Te, Detox Te, Välmående Te, Te Mot Uppblåsthet, Mindre Uppblåsthet, Platt Mage Te, Viktminskning Te, Sötsug, Energi Te, Matsmältning, Superfood Te, Matcha Te, Yerba Mate Te, Sencha Te, Oolong Te, Gojibär, Mariatistel, Ginseng, Citrongräs, Nässelblad, Maskrosblad, Guarana, Stevia, Veganskt Te, Glutenfritt Te, Sverige",
+                offer: "BEGRÄNSAT ERBJUDANDE: 70% RABATT",
+                h1: "Lulutox Tea:<br> Välmående, plattare mage<br> och mer energi",
+                "p-hero": "Upplev en enklare start med en daglig kopp. Lulutox Tea kan bidra till mindre uppblåsthet, stödja matsmältningen och ge en lättare känsla i kroppen.",
+                "list-1": "Stöd för matsmältning och välmående",
+                "list-2": "13 naturliga ingredienser (icke-GMO)",
+                "list-3": "30 dagars pengarna-tillbaka-garanti",
+                choose: "Välj ditt land:",
+                fr: "Frankrike", no: "Norge", it: "Italien", se: "Sverige",
+                "footer-copy": "&copy; 2026 Lulutox Tea. Naturliga Välmående Lösningar.",
+                "auth-retailer": "Auktoriserad Lulutox Global Återförsäljare",
+                entity: "Ansvarig Enhet:",
+                correspondence: "Korrespondensadress:",
+                support: "Support: support@lulutox.com | +1 (888) 828-8952",
+                "btn-terms": "Försäljningsvillkor",
+                "btn-privacy": "Integritetspolicy",
+                "btn-shipping": "Fraktpolicy",
+                "btn-returns": "Returpolicy",
+                "btn-close": "Stäng",
+                "footer-disclaimer": "<p>Denna webbplats är inte en del av Google™ eller Meta Inc. Lulutox Tea är en premiumprodukt från Fonslife Trading FZCO.</p><p>Resultaten kan variera från person till person. Informationen på denna webbplats är endast avsedd som information.</p>"
+            }
+        };
+
+        function applyTranslation() {
+            const userLang = navigator.language.split('-')[0];
+            const dict = translations[userLang];
+            
+            if (dict) {
+                // Update visible UI
+                document.querySelectorAll('[data-i18n]').forEach(el => {
+                    const key = el.getAttribute('data-i18n');
+                    if (dict[key]) { el.innerHTML = dict[key]; }
+                });
+                
+                // Update invisible SEO metas
+                if (dict.title) document.title = dict.title;
+                if (dict.desc) document.querySelector('meta[name="description"]').setAttribute('content', dict.desc);
+                if (dict.keywords) document.querySelector('meta[name="keywords"]').setAttribute('content', dict.keywords);
+                
+                document.documentElement.lang = userLang;
+            }
+        }
+
+        window.addEventListener('DOMContentLoaded', applyTranslation);
+
+        // Modals Logic
+        const modal = document.getElementById('policy-modal');
+        const modalTitle = document.getElementById('modal-title');
+        const modalContent = document.getElementById('modal-content-area');
+
+        const modalData = {
+            terms: {
+                title: "TERMS OF SALE",
+                content: `
+                    <div class="space-y-4">
+                        <p class="font-bold">IMPORTANT – PLEASE CAREFULLY READ AND UNDERSTAND THESE TERMS OF SALE BEFORE ACCESSING, USING, OR PLACING AN ORDER THROUGH OUR WEBSITE.</p>
+                        <p>Your use of https://lulutox.com are governed by the policies, terms, and conditions set forth below.</p>
+                        <h4>Fonslife Trading FZCO</h4>
+                        <p>Company registered in the UAE under license 39314. Dubai Silicon Oasis, DDP, Building A1, Dubai, UAE.</p>
+                        <h4>PRODUCTS SOLD FOR PERSONAL USE ONLY</h4>
+                        <p>You agree that any products purchased will be used for personal, non-commercial use. You will not resell or redistribute any product.</p>
+                        <h4>NO MEDICAL ADVICE</h4>
+                        <p>Material on the Website is for informational purposes only and is not intended as medical advice. Statements have not been evaluated by the FDA.</p>
+                        <h4>SATISFACTION GUARANTEE</h4>
+                        <p>Lulutox offers a Satisfaction Guarantee within 30 days from the date you received your order for a full refund.</p>
+                    </div>
+                `
+            },
+            privacy: {
+                title: "PRIVACY POLICY",
+                content: `
+                    <div class="space-y-4">
+                        <p>Lulutox is committed to protecting our customer's privacy. Fonslife Trading FZCO is the data controller.</p>
+                        <h4>DATA COLLECTION</h4>
+                        <table class="policy-table">
+                            <thead><tr><th>Purpose</th><th>Data</th><th>Retention</th></tr></thead>
+                            <tbody>
+                                <tr><td>Order Processing</td><td>Name, address, email.</td><td>1 year</td></tr>
+                                <tr><td>Payments</td><td>Payment tokens.</td><td>Active sub + 1 month</td></tr>
+                                <tr><td>Security</td><td>IP, browser info.</td><td>1 month</td></tr>
+                            </tbody>
+                        </table>
+                        <h4>YOUR RIGHTS</h4>
+                        <p>GDPR provides rights to access, correct, delete, or restrict processing of your data. You can opt-out of marketing at any time.</p>
+                    </div>
+                `
+            },
+            shipping: {
+                title: "SHIPPING POLICY",
+                content: `
+                    <div class="space-y-4">
+                        <h4>Global Shipping</h4>
+                        <p>We offer worldwide shipping. Handling charges start from $4.95.</p>
+                        <h4>Estimated Delivery</h4>
+                        <ul>
+                            <li><strong>USA:</strong> 2-5 business days</li>
+                            <li><strong>Europe:</strong> 12-18 days</li>
+                            <li><strong>UK / Canada / Australia:</strong> 10-15 days</li>
+                        </ul>
+                        <p>Customers are responsible for any customs duties or import fees.</p>
+                    </div>
+                `
+            },
+            returns: {
+                title: "RETURN POLICY",
+                content: `
+                    <div class="space-y-4">
+                        <h4>Hassle-Free Returns</h4>
+                        <p>Submit a request within 30 days of receiving your order. Items must be unopened and unused unless defective.</p>
+                        <h4>Return Address</h4>
+                        <p><strong>4391 W Hargrave Ave Post Falls, ID 83854, USA</strong></p>
+                        <p>Contact support before sending items. Refunds are processed within 7 business days of inspection.</p>
+                    </div>
+                `
+            }
+        };
+
+        function openModal(type) {
+            const data = modalData[type];
+            if (data) {
+                modalTitle.innerText = data.title;
+                modalContent.innerHTML = data.content;
+                modal.classList.remove('hidden');
+                document.body.classList.add('modal-open');
+            }
+        }
+        function closeModal() { modal.classList.add('hidden'); document.body.classList.remove('modal-open'); }
+        document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
+    </script>
+</body>
+</html>
